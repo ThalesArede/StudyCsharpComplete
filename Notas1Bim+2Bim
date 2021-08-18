@@ -1,0 +1,27 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double notaf, bim1, bim2;
+
+		System.out.println("Quais as notas?");
+
+		bim1 = sc.nextDouble();
+		bim2 = sc.nextDouble();
+
+		notaf = bim1 + bim2;
+		System.out.printf("NOTA FINAL = %.2f%n", notaf);
+
+		if (notaf < 60.00) {
+			System.out.println("REPROVADO");
+		}
+
+		sc.close();
+	}
+}
