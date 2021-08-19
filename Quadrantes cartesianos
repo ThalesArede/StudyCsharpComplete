@@ -1,0 +1,38 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double x = sc.nextDouble();
+		double y = sc.nextDouble();
+
+		if (x == 0.0 && y == 0.0) {
+			System.out.println("ORIGEM");
+		} 
+			else if (x == 0.0) {
+				System.out.println("Eixo x");
+		} 
+			else if (y == 0.0) {
+				System.out.println("Eixo y");
+		} 
+			else if (x > 0.0 && y > 0.0) {
+				System.out.println("QUADRANTE1");
+		} 
+			else if (x < 0.0 && y > 0.0) {
+				System.out.println("QUADRANTE2");
+		} 
+			else if (x < 0.0 && y < 0.0) {
+				System.out.println("QUADRANTE3");
+		} 
+			else if (x > 0.0 && y < 0.0) {
+				System.out.println("QUADRANTE4");
+		}
+
+		sc.close();
+	}
+}
