@@ -1,0 +1,32 @@
+using System.Globalization;
+
+namespace Course {
+    class Program {
+
+        static void Main(string[] args) {
+
+            int n = int.Parse(Console.ReadLine());
+
+            double[] vect = new double[n]; // "n" é o número de caixas que terá o meu vetor
+
+            for (int i = 0; i < n; i++) { 
+               vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture); // vai ler o número de caixas que terá em meu vetor 
+            }
+
+            double soma = 0.0; 
+            for (int i = 0; i < n; i++) { 
+                soma = soma + vect[i];
+            }
+
+            double avg = soma / n; 
+
+            Console.WriteLine("AVERAGE HEIGHT = " + avg.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
+// Console: AVERAGE HEIGHT = 1.69
+// Digitamos 
+3
+1.72
+1.56
+1.80
