@@ -1,0 +1,35 @@
+using System.Globalization;
+
+namespace Course {
+    class Program {
+
+        static void Main(string[] args) {
+
+            double? x = null; // x não tem valor, então será nulo (0)
+            double? y = 10.0; 
+
+            Console.WriteLine(x.GetValueOrDefault()); // Pedimos para o console exibir o valor ou default (nulo 0)
+            Console.WriteLine(y.GetValueOrDefault());
+            
+            Console.WriteLine(x.HasValue); // Irá exibir "false" na tela pois seu valor é nulo, 0.
+            Console.WriteLine(y.HasValue); // irá exibir "true" na tela, poise atribuimos o valor 10.0 ao y, não é nulo.
+            
+            Console.WriteLine(x.HasValue); // Se tentarmos rodar o programa sem o if e else abaixo, o programa quebra e não roda.
+            Console.WriteLine(y.HasValue);
+
+            if (x.HasValue) { // Se x tiver algum valor atribuído à ele, irá mostrar na tela.
+                Console.WriteLine(x.Value); 
+            }
+            else {
+                Console.WriteLine("X is null"); // Caso x não tenha valor atribuído à ele, irá mostrar a mensagem ao lado.
+            }
+            
+            if (y.HasValue) {
+                Console.WriteLine(y.Value);
+            }
+            else {
+                Console.WriteLine("Y is null");
+            }
+        }
+    }
+}
