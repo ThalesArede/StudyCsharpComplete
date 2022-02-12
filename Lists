@@ -8,7 +8,7 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
 
-            List<string> list = new List<string>();
+            List<string> list = new List<string>(); // Criação de uma lista
 
             list.Add("Maria"); 
             list.Add("Alex");
@@ -21,7 +21,7 @@ namespace ConsoleApp
             {
                 Console.WriteLine(obj); 
             }
-            Console.WriteLine("List Count:" + list.Count);
+            Console.WriteLine("List Count:" + list.Count); // Vai mostrar no console "List Count: 5" pois além dos 4 nomes, adicionamos o Marco com o Insert
         }
     }
 }
