@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double[,] mat = new double[2, 3];
+
+            Console.WriteLine(mat.Length); // Mostra na tela do console o comprimento da matriz - Total
+            
+            Console.WriteLine(mat.Rank); // Quanto vale a primeira dimensão da matriz - Quantidade de linhas
+            
+            Console.WriteLine(mat.GetLength(0)); // Imprime o 2 
+
+            Console.WriteLine(mat.GetLength(1)); // Imprime o 3
+            
+        }
+    }
+}
