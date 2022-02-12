@@ -1,0 +1,27 @@
+using System.Collections.Generic;
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<string> list = new List<string>();
+
+            list.Add("Maria"); 
+            list.Add("Alex");
+            list.Add("Bob");
+            list.Add("Ana");
+
+            list.Insert(1, "Marco"); // Adiciona o nome "Marco" á posição 1, lembrando que C# começa do 0, 1, 2, 3 e etc
+
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj); 
+            }
+            Console.WriteLine("List Count:" + list.Count);
+        }
+    }
+}
