@@ -1,0 +1,91 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            DateTime d1 = DateTime.Now; // Retorna o momento atual na tela, data e hora
+            Console.WriteLine(d1);
+            Console.WriteLine(d1.Ticks); // Quantidade de Ticks (100 nanosegundos) que se passaram desde o dia primeiro
+        }
+    }
+}
+
+
+
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // DateTime usando Construtores
+            DateTime d1 = new DateTime(2018, 11, 25); // Imprime 25/11/2018 às 00h00
+            DateTime d2 = new DateTime(2018, 11, 25, 20, 45, 3);// Imprime 25/11/2018 às 20:45:03
+            DateTime d3 = new DateTime(2018, 11, 25, 20, 45, 3, 500);// Imprime 25/11/2018 às 20:45:03  + milisegundos
+
+            // Utilizando Builders
+            DateTime d4 = DateTime.Now; // Imprime o horário de agora
+            DateTime d5 = DateTime.Today; // Imprime a data de hoje com horário zerado
+            DateTime d6 = DateTime.UtcNow; // Imprime a data de hoje e o horário universal
+
+            Console.WriteLine(d1);
+            Console.WriteLine(d2);
+            Console.WriteLine(d3);
+            Console.WriteLine(d4);
+            Console.WriteLine(d5);
+            Console.WriteLine(d6);
+
+        }
+    }
+}
+
+
+
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         
+            DateTime d1 = DateTime.Parse("2000-08-15"); // Converte o texto para data arrumada
+            DateTime d2 = DateTime.Parse("2000-08-15 13:05:58");
+            DateTime d3 = DateTime.Parse("15/08/2000");
+            DateTime d4 = DateTime.Parse("15/08/2000 13:05:58");
+
+            Console.WriteLine(d1);
+            Console.WriteLine(d2);
+            Console.WriteLine(d3);
+            Console.WriteLine(d4);
+        }
+    }
+}
+
+
+
+using System;
+using System.Globalization;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Máscaras de formatação
+            DateTime d1 = DateTime.ParseExact("2000-08-15", "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            DateTime d2 = DateTime.ParseExact("15/08/2000 13:05:38", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+
+            Console.WriteLine(d1);
+            Console.WriteLine(d2);
+        }
+    }
+}
