@@ -1,0 +1,26 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string original = "abcde FGHIJ ABC abc DEFG ";
+
+            string s1 = original.ToUpper(); // Imprime no console todas as letras de "original" em letra maiúscula
+            string s2 = original.ToLower(); // Imprime no console todas as letras de "original" em letra minúscula
+            string s3 = original.Trim(); // Imprime o console sem os espaçamentos ( " - " ) no WriteLine
+            int n1 = original.IndexOf("bc"); // Mostra a posição do primeiro "bc" no Console
+            int n2 = original.LastIndexOf("bc"); // Mostra a posição do último "bc" no Console
+
+            Console.WriteLine("Original: -" + original + "-");
+            Console.WriteLine("ToUpper: -" + s1 + "-");
+            Console.WriteLine("ToLow: -" + s2 + "-");
+            Console.WriteLine("Trim: -" + s3 + "-");
+            Console.WriteLine("IndexOf('bc'): "  + n1);
+            Console.WriteLine("LastIndexOf('bc'): " + n2);
+        }
+    }
+}
