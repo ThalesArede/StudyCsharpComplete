@@ -13,12 +13,12 @@ namespace Helloworld {
       Console.ReadLine();
       }
       
-      statis void ExibirMsg() {
-          Console.WriteLine("Temos um ótimo sistema!);
-          Console.WriteLine("Temos um ótimo sistema!);
+      static void ExibirMsg() {
+          Console.WriteLine("Temos um ótimo sistema!");
+          Console.WriteLine("Temos um ótimo sistema!");
       }
       
-      statis void GerarPreco(int preco, string nome) { // Funções nunca podem estar uma dentro da outra
+      static void GerarPreco(int preco, string nome) { // Funções nunca podem estar uma dentro da outra
           Console.WriteLine("Preço do produto: " + preco);
           Console.WriteLine("Nome do produto: " + nome);   
       }
@@ -34,24 +34,30 @@ namespace Helloworld {
 
   class Program {
     
-    static void Main(string[] args) {
-      
-      ExibirMsg(); // Chamamos o ExibirMsg preço que foi passado com parâmetros abaixo no código
-      
-      GerarPreco(60);
-      
-      Console.ReadLine();
-      }
-      
-      statis void ExibirMsg() {
-          Console.WriteLine("Temos um ótimo sistema!);
-          Console.WriteLine("Temos um ótimo sistema!);
-      }
-      
-      statis void GerarPreco(int preco) {
-          int valorFinal = preco + (2 * preco);
-          Console.WriteLine("Valor final: " + valorFinal);  
-      }
+    static void Main(string[] args)
+        {
+
+            ExibirMsg(); // Chamamos o ExibirMsg preço que foi passado com parâmetros abaixo no código
+
+            GerarPreco(50);
+            GerarPreco(40);
+            GerarPreco(30);
+            GerarPreco(20);
+            GerarPreco(10);
+
+            Console.ReadLine();
+        }
+
+        static void ExibirMsg()
+        {
+            Console.WriteLine("Temos um ótimo sistema!");
+            Console.WriteLine("Temos um ótimo sistema!");
+        }
+
+        static void GerarPreco(int preco)
+        {
+            int valorFinal = preco + (2 * preco);
+            Console.WriteLine("Valor final: " + valorFinal);
+        }
     }
-  }
 }
