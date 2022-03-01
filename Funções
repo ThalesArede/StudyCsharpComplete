@@ -1,0 +1,28 @@
+using System;
+
+namespace Helloworld {
+
+  class Program {
+    
+    static void Main(string[] args) {
+      
+      ExibirMsg(); // Chamamos o ExibirMsg preço que foi passado com parâmetros abaixo no código
+      
+      GerarPreco(60, "Maria"); // Chamamos o GerarPreco que foi passado com parâmetros abaixo no código
+      
+      Console.ReadLine();
+      }
+      
+      statis void ExibirMsg() {
+          Console.WriteLine("Temos um ótimo sistema!);
+          Console.WriteLine("Temos um ótimo sistema!);
+      }
+      statis void GerarPreco(int preco, string nome) { // Funções nunca podem estar uma dentro da outra
+          Console.WriteLine(preco);
+          Console.WriteLine(nome!);   
+      }
+    }
+  }
+}
+
+    
