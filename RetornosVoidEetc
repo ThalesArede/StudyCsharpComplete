@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Somar(1, 2, 3);
+            Somar(10, 20, 30);
+            Somar(100, 200, 300);
+            Console.ReadLine();
+
+        }
+        static void Somar(int a, int b, int c)
+        {
+            int resultadoFinal = a + b + c;
+            Console.WriteLine(resultadoFinal);
+        }
+    }
+}
