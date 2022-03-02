@@ -1,0 +1,26 @@
+using System;
+
+namespace Helloworld {
+
+  class Program {
+  
+    static void Main(string [] args) {
+    
+    // Dentro de "new string[]", digitamos quantos espaços vamos usar
+    
+    string[] produtos = new string[] {"Sea of thieves,
+    "Fifa",
+    "Minecraft",
+    "Half Life",
+    "Portal"
+    };
+    
+    Console.WriteLine(produtos[2]); // Mostra na tela "Minecraft 
+    
+    Console.ReadLine(); 
+    
+    }
+  
+  }
+
+}
