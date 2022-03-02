@@ -1,0 +1,25 @@
+using System;
+using System.Globalization;
+
+namespace HelloWorld { 
+
+   class Program {
+       
+        enum Cor { Azul, Verde, Amarelo, Vermelho, Roxo }
+
+	      static void Main(String[] args) {
+    
+          Cor corFavorita = Cor.Vermelho; // Aqui chamamos o Enum Cor e selecionamos o vermelho, o mesmo foi feito abaixo
+          Cor corFavoritaDoThales = Cor.Roxo;
+          
+          Console.WriteLine((int)corFavorita); // Vai imprimir "Vermelho" abaixo "Roxo"
+          
+          // Colocando o (int) antes do corFavorita, vai imprimir o 3 no console pois na ordem que definimos o enum acima, o Vermelho é o número 3
+          
+          Console.WriteLine(corFavoritaDoThales);
+
+          Console.ReadLIne();
+          
+	      }
+    }
+}
