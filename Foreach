@@ -1,22 +1,25 @@
 using System;
+using System.Globalization;
 
-namespace HelloWord {
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
 
-  class Program {
-  
-    static void Main(string[] args) {
-     
-      string[] palavras = { "Thales", "Arêde", "Csharp", Livros" }
-      
-      foreach(string palavra in palavras) { //--> Para cada palavra no array (string[]) palavras repita o bloco de código
-      
-      Console.WriteLine("Foreach rodando!");
-      
-      }
-      
-      Console.WriteLine("Fim da Linha");
-      Console.ReadLine();
-     
-     }
-   }
+            string[] palavras = {"Thales", "Arêde", "Csharp", "Livros"};
+
+
+            foreach (string palavra in palavras) { //--> Para cada palavra no array (string[]) palavras repita o bloco de código
+
+                Console.WriteLine("Foreach rodando!");
+
+            }
+
+            Console.WriteLine("Fim da Linha");
+            Console.ReadLine();
+
+        }
+    }
 }
