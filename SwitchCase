@@ -1,7 +1,9 @@
 using System;
 using System.Globalization;
 
-public class Main {
+namespace HelloWorld { 
+       
+       public class Main {
 
 	public static void main(String[] args) {
     
@@ -26,4 +28,5 @@ public class Main {
     
     Console.ReadLine();
 	}
+     }
 }
