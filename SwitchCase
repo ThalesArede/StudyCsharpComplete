@@ -1,0 +1,29 @@
+using System;
+using System.Globalization;
+
+public class Main {
+
+	public static void main(String[] args) {
+    
+    string cor = "Azul";
+    
+    switch (cor) {
+        case "Vermelho";
+             Console.WriteLine("Sua cor é vermelho!");
+             break;
+        case "Amarelo";
+             Console.WriteLine("Sua cor é amarelo!");
+             break;     
+        case "Azul";
+             Console.WriteLine("Sua cor é azul!");
+             break;
+        default:
+             Console.WriteLine("Sua cor eu não sei!");
+             break;
+    } 
+    
+    // Como demos o valor "Azul" para a string cor, ele exibirá no console "Sua cor é Azul"
+    
+    Console.ReadLine();
+	}
+}
