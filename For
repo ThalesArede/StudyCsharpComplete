@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            for(int contador = 0; contador < 10; contador++) //--> "for" inicia valendo 0
+            {                                               //--> Enquanto contador for menor que 10, exiba a mensagem abaixo
+                Console.WriteLine("For funcionando");
+            }
+
+            Console.WriteLine("Fim da Linha");
+            Console.ReadLine();
+
+        }
+    }
+}
