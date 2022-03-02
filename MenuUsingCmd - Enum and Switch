@@ -30,11 +30,14 @@ namespace HelloWorld {
                 break;
               case Opcao.Atualizar:
                 break;
+	      default:
+	      Console.WriteLine("Opção não encontrada!");
+	      	break;
           }
           
           Console.WriteLine(opcaoSelecionada);
           
           Console.ReadLIne();          
-	      }
+	}
     }
 }
