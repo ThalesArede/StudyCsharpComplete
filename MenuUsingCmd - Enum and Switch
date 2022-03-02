@@ -1,0 +1,40 @@
+using System;
+using System.Globalization;
+
+namespace HelloWorld { 
+
+   class Program {
+       
+        enum Cor { Azul, Verde, Amarelo, Vermelho, Roxo }
+        
+        // Definimos o "Criar" como = 1 pois em C# começa a contar de 0, definindo como 1, automaticamente segue a ordem
+        enum Opcao { Criar = 1, Deletar, Editar, Listar, Atualizar }
+        
+	      static void Main(String[] args) {
+          
+          Console.WriteLine("Selecione uma das opções abaixo: ");
+          Console.WriteLine("1-Criar\n2-Deletar\n3-Editar\n4-Listar\n5-Atualizar");
+          
+          int index = int.Parse(Console.ReadLine()); // Vai capturar o número digitado pelo usuário
+          
+          Opcao opcaoSelecionada = (Opcao)index;
+          
+          switch (opcaoSelecionada) {
+              case Opcao.Criar:
+                break;
+              case Opcao.Deletar:
+                break;
+              case Opcao.Editar:
+                break;
+              case Opcao.Listar:
+                break;
+              case Opcao.Atualizar:
+                break;
+          }
+          
+          Console.WriteLine(opcaoSelecionada);
+          
+          Console.ReadLIne();          
+	      }
+    }
+}
