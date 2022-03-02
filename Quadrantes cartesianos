@@ -1,38 +1,34 @@
-import java.util.Locale;
-import java.util.Scanner;
+using System;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void Main(String[] args) {
 
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
-
-		double x = sc.nextDouble();
-		double y = sc.nextDouble();
+		double x = double.Parse(Console.ReadLine());
+		double y = double.Parse(Console.ReadLine());
 
 		if (x == 0.0 && y == 0.0) {
-			System.out.println("ORIGEM");
+			Console.WriteLine("ORIGEM");
 		} 
 			else if (x == 0.0) {
-				System.out.println("Eixo x");
+				Console.WriteLine("Eixo x");
 		} 
 			else if (y == 0.0) {
-				System.out.println("Eixo y");
+				Console.WriteLine("Eixo y");
 		} 
 			else if (x > 0.0 && y > 0.0) {
-				System.out.println("QUADRANTE1");
+				Console.WriteLine("QUADRANTE1");
 		} 
 			else if (x < 0.0 && y > 0.0) {
-				System.out.println("QUADRANTE2");
+				Console.WriteLine("QUADRANTE2");
 		} 
 			else if (x < 0.0 && y < 0.0) {
-				System.out.println("QUADRANTE3");
+				Console.WriteLine("QUADRANTE3");
 		} 
 			else if (x > 0.0 && y < 0.0) {
-				System.out.println("QUADRANTE4");
+				Console.WriteLine("QUADRANTE4");
 		}
 
-		sc.close();
+		Console.ReadLine();
 	}
 }
