@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 
 namespace ConsoleApp
 {
@@ -8,12 +7,12 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
 
-            string[] palavras = {"Thales", "Arêde", "Csharp", "Livros"};
+            string[] palavras = {"Thales", "Arêde", "Csharp", "Livros"}; //--> Array
 
 
             foreach (string palavra in palavras) { //--> Para cada palavra no array (string[]) palavras repita o bloco de código
 
-                Console.WriteLine("Foreach rodando!");
+                Console.WriteLine(palavra); //--> Se deixarmos a variável palavra dentro do WriteLine, imprime todas as palavras do array
 
             }
 
