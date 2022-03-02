@@ -1,0 +1,22 @@
+using System;
+
+namespace HelloWorld {
+  
+  class Program {
+      
+      static void Main(string[] args) {
+      
+        int contador = 0;
+        
+        while (contador < 10) { //--Enquanto "contador for menor que 10" o programa entra no bloco While
+        
+        Console.WriteLine("Rodando o While!");
+        contador = contador + 1; //--Vai executar o código 10x
+        }
+        
+        Console.WriteLine("Fim do Programa");
+        Console.ReadLine();
+      
+       }
+    }
+ }
