@@ -1,0 +1,19 @@
+using System; /* Usar o .Net Framework */
+
+namespace HelloWorld {
+  
+  class Program {
+  
+  /* Struct criado fora da função Main */
+  
+  struct Produto {
+    
+    nome 
+    
+  }
+  
+      static void Main(string[] args) {
+      
+       }
+    }
+ }
