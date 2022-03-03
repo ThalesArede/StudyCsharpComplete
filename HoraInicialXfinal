@@ -1,15 +1,15 @@
-import java.util.Scanner;
+namespace HelloWorld {
 
-public class Main {
+class Main {
 
-	public static void main(String[] args) {
+	public static void Main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		Console.WriteLine("Digite a Hora inicial e final");
 
 		int incialH, finalH, duracao;
 		
-		incialH = sc.nextInt();
-		finalH = sc.nextInt();
+		incialH = Console.ReadLine();
+		finalH = Console.ReadLine();
 
 		if (incialH < finalH) {
 			duracao = finalH - incialH;
@@ -17,8 +17,9 @@ public class Main {
 			duracao = 24 - incialH + finalH;
 		}
 
-		System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
+		Console.WriteLine("O JOGO DUROU " + duracao + " HORA(S)");
 
-		sc.close();
+		Console.ReadLine();
 	}
+    }
 }
