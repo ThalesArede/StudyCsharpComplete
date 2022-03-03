@@ -1,27 +1,24 @@
-import java.util.Locale;
-import java.util.Scanner;
+using System;
+using System.Globalization;
 
 public class Main {
 
-	public static void main(String[] args) {
-
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
+	public static void Main(String[] args) {
 
 		double notaf, bim1, bim2;
 
-		System.out.println("Quais as notas?");
+		Console.WriteLine("Quais as notas?");
 
-		bim1 = sc.nextDouble();
-		bim2 = sc.nextDouble();
+		bim1 = double.Parse(Console.ReadLine());
+		bim2 = double.Parse(Console.ReadLine());
 
 		notaf = bim1 + bim2;
-		System.out.printf("NOTA FINAL = %.2f%n", notaf);
+		Console.WriteLine("NOTA FINAL = " + notaf.ToString("F2", CultureInfo.InvanriantCulture));
 
 		if (notaf < 60.00) {
-			System.out.println("REPROVADO");
+			Console.WriteLine("REPROVADO");
 		}
 
-		sc.close();
+		Console.ReadLine();
 	}
 }
