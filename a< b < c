@@ -1,26 +1,24 @@
-import java.util.Scanner;
+using System;
+
+namespace HelloWorld {
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
+		int a = Console.ReadLine();
+		int b = Console.ReadLine();
+		int c = Console.ReadLine();
 
 		if (a < b && a < c) {
-			System.out.println("MENOR = " + a);
-		}
-
-		else if (b < a && b < c) {
-			System.out.println("MENOR = " + b);
+			Console.WriteLine("MENOR = " + a);
+		} else if (b < a && b < c) {
+			Console.WriteLine("MENOR = " + b);
 		} else {
-			System.out.println("MENOR = " + c);
+			Console.WriteLine("MENOR = " + c);
 		}
-
-		sc.close();
+		
+		Console.ReadLine();
 	}
-
+    }
 }
