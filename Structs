@@ -1,19 +1,33 @@
 using System; /* Usar o .Net Framework */
 
-namespace HelloWorld {
-  
-  class Program {
-  
-  /* Struct criado fora da função Main */
-  
-  struct Produto {
+namespace HelloWorld 
+{
+  class Program 
+    { 
+  struct Produto /* Struct criado fora da função Main */
+   {   
+    public string nome; //--> Public diz que qualquer parte do código vai conseguir acessar esses atributos
+    public float preco;
+    public float peso;
+    public string marca;    
     
-    nome 
+    /* Construtor - não retorna nada */
     
-  }
-  
-      static void Main(string[] args) {
-      
+    public Produto (string nome, float preco, float peso, string marca) // Definimos a ordem
+      {
+      this.nome = nome; // Variável do atributo recebe variável do parâmetro, this.nome está acessando o "nome" fora do construtor
+      this.preco = preco;
+      this.peso = peso;
+      this.marca = marca;
+      }   
+   }  
+      static void Main(string[] args) 
+       {       
+        Produto bola = new Produto("Bola do Ronaldinho", 2f, 1f, "Nike"); // Definimos os dados do Produto 
+        Produto balde = new Produto("Balde forte",8f, 2f, "Csharp");
+        
+        Console.WriteLine(bola.nome); /* Vai exibir em tela "Bola do Ronaldinho" */
+        Console.ReadLine();
        }
     }
  }
