@@ -1,5 +1,16 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/* Módulo LINQ "using System.Linq;" - Biblioteca: Apenas no C# e trás funções de 
+manipulações de dados, filtragem de dados, remoção, busca e várias operações */
+
+// Para trabalhar com dados precisamos sempre importar "using System.Collections.Generic;"
+
+/* Listas e arrays são parecidos, porém as listas são para dados multiplos, arrays 
+para quando sabemos a quantidade de dados*/
 
 namespace ConsoleApp
 {
@@ -7,45 +18,38 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            // Criação de uma lista:
+            List<string> clientes = new List<string>(); // Dentro do <...> fica o tipo de dados que vamos trabalhar
 
-            List<string> list = new List<string>(); // Criação de uma lista
+            clientes.Add("Victor"); // Para adicionar informações à lista
+            clientes.Add("Thales");
 
-            list.Add("Maria"); 
-            list.Add("Alex");
-            list.Add("Bob");
-            list.Add("Ana");
+            // Podemos adicionar também dessa forma:
+            string pessoa = "Gabriel";
+            clientes.Add(pessoa);
 
-            list.Insert(1, "Marco"); // Adiciona o nome "Marco" á posição 1, lembrando que C# começa do 0, 1, 2, 3 e etc
+            // Para acessar um elemento da lista:
+            Console.WriteLine(clientes[2]); // Vai exibir o elemento 2 de nossa lista, no caso "Gabriel"
 
-            foreach (string obj in list)
+            // Para cada cliente dentro da lista de clientes, excute o código
+            foreach (string cliente in clientes)
             {
-                Console.WriteLine(obj); 
-            }
-            Console.WriteLine("List Count:" + list.Count); // Vai mostrar no console "List Count: 5" pois além dos 4 nomes, adicionamos o Marco com o Insert
-            
-            string s1 = list.Find(x => x[0] == 'A');
-            Console.WriteLine("First 'A': " + s1);
-
-            string s2 = list.FindLast(x => x[0] == 'A');
-            Console.WriteLine("Last 'A': " + s2);
-
-            int pos1 = list.FindIndex(x => x[0] == 'A');
-            Console.WriteLine("First Position 'A': " + pos1);
-            
-            int pos2 = list.FindLastIndex(x => x[0] == 'A');
-            Console.WriteLine("Last Position 'A': " + pos2);
-
-            List<string> list2 = list.FindAll(x => x.Length == 5);
-            Console.WriteLine("--------------");
-            foreach (string obj in list2)
-            {
-                Console.WriteLine(obj);
+                Console.WriteLine(cliente); // Vai exibir todos os nomes que adicionei na lista
             }
 
-            list.Remove("Alex"); // Remover o Alex da primeira lista
-            Console.WriteLine("--------------");
-            foreach (string obj in list)
-                Console.WriteLine(obj);
+            clientes.RemoveAt(1); // Vai exibir todos os nomes menos o que está na posição "1" da lista
+
+            // Linq abaixo: using System.Linq; || Remove da lista todos os elementos que correspondem à um predicado
+            clientes.RemoveAll(cliente => cliente == "José"); // Remova todos os itens onde o cliente seja igual a José
+
+            Console.WriteLine("-----------------------"); // Daqui pra baixo vai imprimir somente Victor & Gabriel
+
+            foreach (string cliente in clientes)
+            {
+                Console.WriteLine(cliente);
+            }
+
+            Console.ReadLine();
         }
     }
 }
