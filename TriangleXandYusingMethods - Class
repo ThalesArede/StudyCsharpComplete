@@ -36,7 +36,7 @@ using System;
 namespace Projetoteste {
     class Triangulo {
 
-        public double A;
+        public double A; // Declarado como public para que possamos acessar a classe através do arquivo principal
         public double B;
         public double C;
 
